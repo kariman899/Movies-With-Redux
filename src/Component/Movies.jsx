@@ -17,8 +17,8 @@ import { IMAGE_PATH } from "../Redux/constants";
 import MyPagnation from "./MyPagnation";
 import avatar from "../../public/profileavatar.png";
 
-export default function Movies(props) {
-  const { query } = props;
+export default function Movies({ query }) {
+
   /**pagnation */
   const totalPages = 200;
   let [page, setPage] = useState(1);
@@ -37,6 +37,7 @@ export default function Movies(props) {
 
   const numberOfMovies = 19;
   const ListBegin = allMovies[0] ? true : false;
+  
   const theme = useTheme();
 
   return (
@@ -54,7 +55,7 @@ export default function Movies(props) {
       }
 
       {/*first movie*/}
-      {query
+      {query.length>2
         ? null
         : allMovies?.length > 0 &&
           allMovies[0] && (
@@ -130,7 +131,7 @@ export default function Movies(props) {
             overflow: "auto",
           }}
         >
-          {query && searchMovie?.length
+          {query.length>2 && searchMovie?.length
             ? searchMovie?.slice(ListBegin, numberOfMovies).map((movie, i) => (
                 <Grid key={i} item xs={12} sm={4} md={3} lg={2}>
                   <Link to={`/Details/${movie.id}`}>
@@ -198,7 +199,7 @@ export default function Movies(props) {
                 </Grid>
               ))}
         </Grid>
-        {moviesLoading || query ? null : (
+        {moviesLoading || query.length>2 ? null : (
           <MyPagnation
             setPage={setPage}
             currentPage={page}

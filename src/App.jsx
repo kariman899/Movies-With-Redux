@@ -14,7 +14,7 @@ function App() {
       <NavBar query={query} setQuery={setQuery} />
       <div className=" container py-4">
         <Routes>
-          <Route path="/" element={<Movies query={query?true:false}/>} />
+          <Route path="/" element={<Movies query={query}/>} />
           <Route path="movies" element={<Movies  />} />
           <Route path="details" element={<Details />}>
             <Route path=":id" element={<Details />}></Route>

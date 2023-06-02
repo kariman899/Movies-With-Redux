@@ -22,7 +22,9 @@ export const getAllMovies = (page) => {
         // payload: allMovies?.data,
 
       });
+      //GET PAGES TOTAL
       // console.log(allMovies?.data)
+      
     } catch (error) {
       dispatch({ type: ERROR, payload: error?.status_message });
     }
