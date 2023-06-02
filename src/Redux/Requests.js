@@ -5,7 +5,6 @@ export const getAllMoviesRequest = async (page) => {
   const movies = await moviesApi.get(
     `/movie/popular?api_key=${API_KEY}&page=${page}`
   );
-  // console.log(page)
   return movies;
 };
 
@@ -18,18 +17,9 @@ export const getMovieDetailsRequest = async (id) => {
 
 
 export const getSearchRequest = async (searchQuery,page) => {
-  console.log("search")
   const searchedMovie = await moviesApi.get(
     `/search/movie?api_key=${API_KEY}&&query=${searchQuery}&page=${page}`
   );
 
   return searchedMovie;
 };
-
-
-// export const getMoviesRequest = async (searchQuery,page) => {
-//   const searchedMovie = await moviesApi.get(
-//     `/search/movie?api_key=${API_KEY}&&query=${searchQuery}&page=${page}`
-//   );
-//   return searchedMovie;
-// };

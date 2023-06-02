@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import NavBar from "./Component/NavBar";
-// import Footer from "./Footer";
 import Movies from "./Component/Movies";
 
 import { Routes, Route } from "react-router-dom";
@@ -22,7 +21,6 @@ function App() {
           </Route>
         </Routes>
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

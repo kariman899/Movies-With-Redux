@@ -53,9 +53,7 @@ export const getSearch = (searchQuery,page) => {
       dispatch({
         type: FETCH_SEARCH,
         payload: searchedMovies?.data?.results,
-        // payload: allMovies?.data,
       });
-      console.log(searchedMovies?.data?.results)
     } catch (error) {
       dispatch({ type: ERROR_SEARCH, payload: error?.status_message });
     }
