@@ -28,7 +28,7 @@ export default function NavBar({query,setQuery}) {
           </IconButton>
         
             <Box display="flex" justifyContent="center" 
-            alignItems="center" borderBottom= "1px solid #fff" >
+            alignItems="center" borderBottom= "1px solid #fff" sx={{mx:2}} >
               <SearchIcon />
               <InputBase
               sx={{ml:1,color:"#fff"}}
