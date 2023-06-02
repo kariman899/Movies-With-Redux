@@ -10,7 +10,7 @@ import {
   CircularProgress,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-// import { useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllMovies } from "../Redux/ActionCreator";
 import { IMAGE_PATH } from "../Redux/constants";
@@ -37,6 +37,7 @@ export default function Movies(props) {
 
   const numberOfMovies = 19;
   const ListBegin = allMovies[0] ? true : false;
+  const theme = useTheme();
 
   return (
     <>
