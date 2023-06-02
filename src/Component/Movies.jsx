@@ -41,13 +41,17 @@ export default function Movies(props) {
 
   return (
     <>
-      {moviesLoading ||
-        searchLoading && 
-          <Box display="flex" alignItems="center" justifyContent="center">
-            <CircularProgress size="6rem" />{" "}
-          </Box>
-        }
+      {moviesLoading && (
+        <Box display="flex" alignItems="center" justifyContent="center">
+          <CircularProgress size="6rem" />{" "}
+        </Box>
+      )}
 
+      {searchLoading && (
+        <Box display="flex" alignItems="center" justifyContent="center">
+          <CircularProgress size="6rem" />{" "}
+        </Box>
+      )}
 
       {/*first movie*/}
       {query
