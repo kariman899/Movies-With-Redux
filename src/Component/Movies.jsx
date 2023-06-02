@@ -140,10 +140,10 @@ export default function Movies(props) {
                         borderRadius: "20px",
                       }}
                       width="100%"
-                      alt={movie.title}
+                      alt={movie?.title}
                       src={
                         movie.poster_path
-                          ? IMAGE_PATH + movie.poster_path
+                          ? IMAGE_PATH + movie?.poster_path
                           : avatar
                       }
                     />
@@ -159,7 +159,7 @@ export default function Movies(props) {
                   </Typography>
                   <Rating
                     readOnly
-                    value={movie.vote_average / 2}
+                    value={movie?.vote_average / 2}
                     precision={0.1}
                   ></Rating>
                 </Grid>
@@ -175,8 +175,8 @@ export default function Movies(props) {
                       width="100%"
                       alt={movie.title}
                       src={
-                        movie.poster_path
-                          ? IMAGE_PATH + movie.poster_path
+                        movie?.poster_path
+                          ? IMAGE_PATH + movie?.poster_path
                           : avatar
                       }
                     />
@@ -188,11 +188,11 @@ export default function Movies(props) {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    {movie.title}
+                    {movie?.title}
                   </Typography>
                   <Rating
                     readOnly
-                    value={movie.vote_average / 2}
+                    value={movie?.vote_average / 2}
                     precision={0.1}
                   ></Rating>
                 </Grid>
